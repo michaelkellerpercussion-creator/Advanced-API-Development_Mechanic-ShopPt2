@@ -141,19 +141,43 @@
       "response": []
     },
     {
-      "name": "GET Tickets",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
+      "name": "GET Customers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/customers",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "customers"
+          ]
+        }
       },
+      "response": []
+    },
+    {
+      "name": "POST Service Ticket",
       "request": {
         "auth": {
           "type": "noauth"
         },
-        "method": "GET",
+        "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n    \"vin\": \"12345678901234567\",\r\n    \"service_desc\": \"car broke\",\r\n    \"customer_id\": \"1\"\r\n}"
+          "raw": "    {\r\n        \"customer_id\": \"2\",\r\n        \"service_desc\": \"car broke\",\r\n        \"vin\": \"12345678901234568\"\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
         },
         "url": {
           "raw": "http://127.0.0.1:5000/service-tickets",
@@ -199,28 +223,6 @@
           "port": "5000",
           "path": [
             "service-tickets"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "GET Customers",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://127.0.0.1:5000/customers",
-          "protocol": "http",
-          "host": [
-            "127",
-            "0",
-            "0",
-            "1"
-          ],
-          "port": "5000",
-          "path": [
-            "customers"
           ]
         }
       },
